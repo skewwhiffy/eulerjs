@@ -34,7 +34,7 @@ greatest product. What is the value of this product?
 
 let expect = require("chai").expect;
 
-describe.only("Problem 8", function() {
+describe("Problem 8", function() {
     let sourceDigits =
         "73167176531330624919225119674426574742355349194934" +
         "96983520312774506326239578318016984801869478851843" +
