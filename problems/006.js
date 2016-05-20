@@ -21,7 +21,7 @@ natural numbers and the square of the sum.
 let expect = require("chai").expect;
 let PrimeFactors = require("../utils/primeFactors");
 
-describe.only("Problem 6", function() {
+describe("Problem 6", function() {
     let solution = upperLimit => {
         let naturals = [];
         for (let i = 1; i <= upperLimit; i++) {
