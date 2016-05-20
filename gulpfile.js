@@ -4,7 +4,7 @@ var util = require("gulp-util");
 var nodemon = require("gulp-nodemon");
 
 gulp.task("run", function () {
-    return gulp.src(['problems/**/*.js'], { read: false })
+    return gulp.src(['problems/**/*.js', '**/*Tests.js'], { read: false })
         .pipe(mocha({ reporter: 'spec' }))
         .on('error', util.log);
 });
