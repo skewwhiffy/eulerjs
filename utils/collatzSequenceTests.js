@@ -1,7 +1,7 @@
 "use strict";
 
-var expect = require("chai").expect;
-var Collatz = require("./collatzSequence");
+let expect = require("chai").expect;
+let Collatz = require("./collatzSequence");
 
 describe("Collatz sequence", () => {
     let collatz = new Collatz();
