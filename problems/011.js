@@ -37,7 +37,7 @@ down, left, right, or diagonally) in the 20×20 grid?
 
 let expect = require("chai").expect;
 
-describe.only("Problem 11", function() {
+describe("Problem 11", function() {
     let grid = [
         "08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08",
         "49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00",
@@ -99,7 +99,6 @@ describe.only("Problem 11", function() {
         for(let i = 0; i < grid.length; i++) {
             expect(grid[i].length).to.equal(20);
         }
-        console.log(grid);
     })
 
     it("Solution: " + solution(), () => {})
