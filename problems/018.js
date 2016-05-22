@@ -41,7 +41,7 @@ containing one-hundred rows; it cannot be solved by brute force, and requires a 
 let expect = require("chai").expect;
 let MaximumPathSum = require("../utils/maximumPathSum");
 
-describe.only("Problem 18", function() {
+describe("Problem 18", function() {
     let maximumPathSum = new MaximumPathSum();
 
     let solution = data => {
