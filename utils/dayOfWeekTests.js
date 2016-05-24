@@ -3,7 +3,7 @@
 let expect = require("chai").expect;
 let DayOfWeek = require("./dayOfWeek");
 
-describe("Day of week", () => {
+describe.only("Day of week", () => {
     let dayOfWeek = new DayOfWeek();
 
     it("Works for Mon 1 Jan 1900", () => {

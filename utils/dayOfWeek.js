@@ -12,11 +12,31 @@ module.exports = function() {
         return 28;
     }
 
+    let numberOfDaysInYear = y => {
+        if (y % 4 !== 0) return 365;
+        if (y % 100 !== 0) return 366;
+        if (y % 400 === 0) return 366;
+        return 365;
+    }
+
     self.day = (y, m, d) => {
-        if (y === 1900 && m === 1 && d === 1) return 1;
-        if (d > 7) return self.day(y, m, d - 7);
-        if (d > 1) return (self.day(y, m, 1) + d - 1) % 7;
-        if (m === 1) return (self.day(y - 1, 12, 31) + 1) % 7;
-        return (self.day(y, m - 1, numberOfDaysInMonth(y, m - 1)) + 1) % 7;
+        let day = 1;
+        let year = 1900;
+        let month = 1;
+        let date = 1;
+        if (year === y && month === m && date === d) return day;
+        while (year < y) {
+            day = (day + numberOfDaysInYear(year)) % 7;
+            year ++;
+        }
+        while (month < m) {
+            day = (day + numberOfDaysInMonth(year, month)) % 7;
+            month ++;
+        }
+        while (date < d) {
+            day = (day + 1) % 7;
+            date++;
+        }
+        return day;
     }
 }

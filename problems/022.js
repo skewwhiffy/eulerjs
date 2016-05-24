@@ -20,7 +20,7 @@ What is the total of all the name scores in the file?
 let expect = require("chai").expect;
 let fs = require("fs");
 
-describe.only("Problem 22", function() {
+describe("Problem 22", function() {
     let names;
     let sortedNames;
 
