@@ -22,6 +22,6 @@ describe("Factors", () => {
     })
 
     it("calculates the sum of proper divisors of 28, a magic number", () => {
-        expect(factors.perfection(28)).to.equal(28);
+        expect(factors.sumOfProperDivisors(28)).to.equal(28);
     })
 })

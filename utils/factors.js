@@ -18,4 +18,8 @@ module.exports = function() {
         }
         return low;
     }
+
+    self.sumOfProperDivisors = source => {
+        return self.factorsOf(source).filter(f => f < source).reduce((c, p) => c + p, 0);
+    }
 }
