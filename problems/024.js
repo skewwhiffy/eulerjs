@@ -19,12 +19,11 @@ What is the millionth lexicographic permutation of the digits 0, 1, 2, 3, 4, 5,
 let expect = require("chai").expect;
 let Permutations = require("../utils/permutations");
 
-describe("Problem 24", function() {
+describe.only("Problem 24", function() {
     let perms = new Permutations();
 
     it("solution: 2783915460", function() {
-        this.timeout(5000);
-        let permutations = perms.permute("0123456789", 1000000);
-        expect(permutations[1000000 - 1]).to.equal("2783915460");
+        let perm = perms.permutationAt("0123456789", 1000000 - 1);
+        expect(perm).to.equal("2783915460")
     })
 })

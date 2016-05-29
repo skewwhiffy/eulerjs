@@ -22,6 +22,28 @@ module.exports = function() {
         return result;
     }
 
+    let permutatationAtInternal = (sourceArray, index) => {
+        if (sourceArray.length === 1) {
+            if (index > 0) return false;
+            return sourceArray[0];
+        }
+        let numberOfSubPerms = 1;
+        for (let i = 1; i < sourceArray.length; i++) {
+            numberOfSubPerms *= i;
+        }
+        if (numberOfSubPerms * sourceArray.length < index) return false;
+        let first = Math.floor(index / numberOfSubPerms);
+        let count = index % numberOfSubPerms;
+        let subPerm = sourceArray.map(x => x);
+        subPerm.splice(first, 1);
+        return sourceArray[first] + permutatationAtInternal(subPerm, count);
+    }
+
+    self.permutationAt = (source, index) => {
+        let sourceArray = source.split("").sort();
+        return permutatationAtInternal(sourceArray, index);
+    }
+
     self.permute = (source, stopAt) => {
         let sourceArray = source.split("").sort();
         return permuteInternal(sourceArray, stopAt);
