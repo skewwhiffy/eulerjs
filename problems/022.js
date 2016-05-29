@@ -33,7 +33,7 @@ describe("Problem 22", function() {
     }
 
     before(done => {
-        fs.readFile("./problems/data/p022_names.txt", "utf8", (err, data) => {
+        fs.readFile("./data/p022_names.txt", "utf8", (err, data) => {
             expect(!err).to.equal(true);
             names = data
                 .substring(1, data.length - 1)
