@@ -17,4 +17,16 @@ describe("Generating primes", () => {
     it("generated 10000th prime correctly", () => {
         expect(prime.prime(9999)).to.equal(104729);
     })
+
+    it("detects primes correctly", () => {
+        let somePrime = 4583;
+        let result = prime.isPrime(somePrime);
+        expect(result).to.equal(true);
+    })
+
+    it("detects non-primes correctly", () => {
+        let someNonPrime = 4585;
+        let result = prime.isPrime(someNonPrime);
+        expect(result).to.equal(false);
+    })
 })

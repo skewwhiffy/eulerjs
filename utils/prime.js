@@ -18,4 +18,9 @@ module.exports = function() {
         while (i >= primes.length) generateMorePrimes();
         if (i < primes.length) return primes[i];
     }
+
+    self.isPrime = x => {
+        while (primes[primes.length - 1] < x) generateMorePrimes();
+        return primes.indexOf(x) > -1;
+    }
 }
