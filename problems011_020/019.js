@@ -38,5 +38,8 @@ describe("Problem 19", function() {
         return count;
     }
 
-    it("solution: " + solution(), () => {});
+    it("solution: 171", () => {
+        let answer = solution();
+        expect(answer).to.equal(171);
+    });
 })

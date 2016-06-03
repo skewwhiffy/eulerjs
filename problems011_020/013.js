@@ -4,7 +4,8 @@
 
 Large sum
 Problem 13
-Work out the first ten digits of the sum of the following one-hundred 50-digit numbers.
+Work out the first ten digits of the sum of the following one-hundred
+50-digit numbers.
 
 37107287533902102798797998220837590246510135740250
 46376937677490009712648124896970078050417018260538
@@ -221,5 +222,8 @@ describe("Problem 13", function() {
         return sum.toString().substring(0, 10);
     }
 
-    it("solution: " + solution(), () => {});
+    it("solution: 5537376230", () => {
+        let answer = solution();
+        expect(answer).to.equal('5537376230');
+    });
 })

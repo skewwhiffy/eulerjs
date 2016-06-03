@@ -48,5 +48,8 @@ describe("Problem 12", function() {
         expect(result).to.equal(28);
     })
 
-    it("Solution: " + solution(500), () => {})
+    it("Solution: 76576500", () => {
+        let result = solution(500);
+        expect(result).to.equal(76576500);
+    });
 })

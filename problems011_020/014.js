@@ -39,5 +39,9 @@ describe("Problem 14", function() {
         return startOfLongest;
     }
 
-    it("solution: " + solution(), () => {});
+    it("solution: 837799", function() {
+        this.timeout(5000);
+        let answer = solution();
+        expect(answer).to.equal(837799);
+    });
 })

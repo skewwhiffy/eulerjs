@@ -34,7 +34,8 @@ Find the maximum total from top to bottom of the triangle below:
 
 NOTE: As there are only 16384 routes, it is possible to solve this problem by
 trying every route. However, Problem 67, is the same challenge with a triangle
-containing one-hundred rows; it cannot be solved by brute force, and requires a clever method! ;o)
+containing one-hundred rows; it cannot be solved by brute force, and requires a
+clever method! ;o)
 
  */
 
@@ -78,5 +79,8 @@ describe("Problem 18", function() {
         "04 62 98 27 23 09 70 98 73 93 38 53 60 04 23"
     ]
 
-    it("solution: " + solution(actualData), () => {})
+    it("solution: 1074", () => {
+        let answer = solution(actualData);
+        expect(answer).to.equal(1074);
+    });
 })

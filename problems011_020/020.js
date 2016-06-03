@@ -29,5 +29,8 @@ describe("Problem 20", function() {
         expect(result).to.equal(27);
     })
 
-    it("solution: " + solution(100), () => {});
+    it("solution: 648", () => {
+        let answer = solution(100);
+        expect(answer).to.equal(648);
+    });
 })
