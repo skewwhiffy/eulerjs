@@ -13,7 +13,7 @@ Find the sum of all the primes below two million.
 let expect = require("chai").expect;
 let Prime = require("../utils/prime");
 
-describe("Problem 10", function() {
+describe("Problem 10", () => {
     let prime = new Prime();
 
     let solution = upperLimit => {
@@ -32,5 +32,8 @@ describe("Problem 10", function() {
         expect(testResult).to.equal(17);
     })
 
-    it("Solution: " + solution(2000000), () => {})
+    it("Solution: 142913828922", () => {
+        let answer = solution(2000000);
+        expect(answer).to.equal(142913828922);
+    });
 })

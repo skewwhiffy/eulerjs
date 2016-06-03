@@ -16,7 +16,7 @@ Find the product abc.
 let expect = require("chai").expect;
 let PythagoreanTriple = require("../utils/pythagoreanTriple");
 
-describe("Problem 9", function() {
+describe("Problem 9", () => {
     let triple = new PythagoreanTriple();
 
     let solution = () => {
@@ -29,5 +29,8 @@ describe("Problem 9", function() {
         }
     }
 
-    it("Solution: " + solution(), () => {})
+    it("Solution: 31875000", () => {
+        let answer = solution();
+        expect(answer).to.equal(31875000);
+    });
 })
