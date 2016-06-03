@@ -28,17 +28,15 @@ describe("Problem 2", function() {
         return numbers.reduce((p, c) => p + c, 0);
     }
 
-    describe("First ten Fibonacci numbers", () => {
-        it("Solution: 4613732", () => {
-            let sum = 0;
-            let i = 1;
-            while (true) {
-                let value = fib.sequence(i);
-                if (value >= 4000000) break;
-                if (value % 2 === 0) sum += value;
-                i++;
-            }
-            expect(sum).to.equal(4613732)
-        })
+    it("Solution: 4613732", () => {
+        let sum = 0;
+        let i = 1;
+        while (true) {
+            let value = fib.sequence(i);
+            if (value >= 4000000) break;
+            if (value % 2 === 0) sum += value;
+            i++;
+        }
+        expect(sum).to.equal(4613732)
     })
 })

@@ -37,7 +37,8 @@ describe("Problem 29", () => {
         expect(result).to.equal(15);
     })
 
-    it("solution: 9183", () => {
+    it("solution: 9183", function() {
+        this.timeout(5000);
         let result = solution(100);
         expect(result).to.equal(9183);
     })

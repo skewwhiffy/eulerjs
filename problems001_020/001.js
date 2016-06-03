@@ -10,7 +10,7 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 
 var expect = require("chai").expect;
 
-describe.only("Problem 1", function() {
+describe("Problem 1", function() {
     let relevantSum = exclusiveUpperLimit => {
         let numbers = [];
         for (let i = 1; i < exclusiveUpperLimit; i++) {

@@ -18,5 +18,8 @@ describe("Problem 3", function() {
         return factors[factors.length - 1];
     }
 
-    it("Solution: " + solution(), () => {})
+    it("Solution: 6857", () => {
+        let answer = solution();
+        expect(answer).to.equal(6857);
+    });
 })
